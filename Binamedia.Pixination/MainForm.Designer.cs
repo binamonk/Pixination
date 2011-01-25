@@ -28,9 +28,12 @@ namespace Binamedia.Pixination
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.mnuMain = new System.Windows.Forms.MenuStrip();
 			this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.mnuToolsGetPixelColor = new System.Windows.Forms.ToolStripMenuItem();
+			this.googleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mnuGoogleLogin = new System.Windows.Forms.ToolStripMenuItem();
 			this.dlgColor = new System.Windows.Forms.ColorDialog();
 			this.pctSelect = new System.Windows.Forms.PictureBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,7 +48,8 @@ namespace Binamedia.Pixination
 			// mnuMain
 			// 
 			this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.toolsToolStripMenuItem});
+									this.toolsToolStripMenuItem,
+									this.googleToolStripMenuItem});
 			this.mnuMain.Location = new System.Drawing.Point(0, 0);
 			this.mnuMain.Name = "mnuMain";
 			this.mnuMain.Size = new System.Drawing.Size(232, 24);
@@ -65,6 +69,21 @@ namespace Binamedia.Pixination
 			this.mnuToolsGetPixelColor.Name = "mnuToolsGetPixelColor";
 			this.mnuToolsGetPixelColor.Size = new System.Drawing.Size(155, 22);
 			this.mnuToolsGetPixelColor.Text = "Get Pixel Color";
+			// 
+			// googleToolStripMenuItem
+			// 
+			this.googleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.mnuGoogleLogin});
+			this.googleToolStripMenuItem.Name = "googleToolStripMenuItem";
+			this.googleToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+			this.googleToolStripMenuItem.Text = "Google";
+			// 
+			// mnuGoogleLogin
+			// 
+			this.mnuGoogleLogin.Name = "mnuGoogleLogin";
+			this.mnuGoogleLogin.Size = new System.Drawing.Size(110, 22);
+			this.mnuGoogleLogin.Text = "Login";
+			this.mnuGoogleLogin.Click += new System.EventHandler(this.MnuGoogleLoginClick);
 			// 
 			// pctSelect
 			// 
@@ -123,6 +142,7 @@ namespace Binamedia.Pixination
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.pctSelect);
 			this.Controls.Add(this.mnuMain);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.mnuMain;
 			this.Name = "MainForm";
 			this.Text = "Pixination";
@@ -133,6 +153,8 @@ namespace Binamedia.Pixination
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem mnuGoogleLogin;
+		private System.Windows.Forms.ToolStripMenuItem googleToolStripMenuItem;
 		private System.Windows.Forms.TextBox txtHex;
 		private System.Windows.Forms.TextBox textBox4;
 		private System.Windows.Forms.TextBox textBox3;
