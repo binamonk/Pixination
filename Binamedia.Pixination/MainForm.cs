@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Diagnostics;
 using System.Windows.Forms;
@@ -7,10 +6,6 @@ using System.Runtime.InteropServices;
 using System.Threading;
 
 using Google.GData.Documents;
-using Google.GData.Client;
-using Google.GData.Extensions;
-using Google.GData.AccessControl;
-
 
 namespace Binamedia.Pixination
 {
